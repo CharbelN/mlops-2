@@ -170,3 +170,35 @@ uv run python scripts/evaluate.py \
 - Optional: JSON file with metrics
 
 **Branch**: `feature/evaluate`
+
+### 3.5 Prediction/Inference Script
+
+**File**: `scripts/predict.py`
+
+**Purpose**: Make predictions on unlabeled data using a trained model.
+
+**Features**:
+- Load trained model from pickle file
+- Process featurized data without labels
+- Generate predictions (0 = Not Survived, 1 = Survived)
+- Include prediction probabilities for both classes
+- Save predictions to CSV with PassengerId
+- Display prediction statistics
+
+**Usage**:
+```bash
+uv run python scripts/predict.py \
+  --model models/model.pkl \
+  --input data/featurized/test_featurized.csv \
+  --output predictions/predictions.csv
+```
+
+**Output CSV columns**:
+- `PassengerId`: Original passenger ID (if available)
+- `Survived`: Predicted class (0 or 1)
+- `Probability_NotSurvived`: Probability of class 0
+- `Probability_Survived`: Probability of class 1
+
+**Branch**: `feature/predict`
+
+---
