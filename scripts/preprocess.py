@@ -1,17 +1,8 @@
-"""
-Data preprocessing script for Titanic survival prediction.
-Handles data loading, cleaning, and basic preprocessing steps.
-"""
-
 import argparse
 import warnings
 from pathlib import Path
 
 import pandas as pd
-
-# Ignore all warnings
-warnings.filterwarnings("ignore")
-
 
 def load_data(train_path, test_path):
     """Load training and test datasets."""
