@@ -229,3 +229,10 @@ The pipeline scripts automatically execute all 5 steps in sequence:
 5. Make predictions
 
 **Branch**: `feature/run-pipeline`
+
+## 5. What Can We Improve?
+
+- Add more advanced models (Random Forest, XGBoost)
+- Implement unit tests and logging
+- Add experiment tracking with MLflow
+- Containerize with Docker
